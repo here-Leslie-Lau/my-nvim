@@ -9,7 +9,9 @@ local map = vim.api.nvim_set_keymap
 -- vim.g.maplocalleader = "\\"
 
 map('n', '<leader>t', ':NvimTreeToggle', opts)
-map('n', '<leader>tf', ':NvimTreeFindFile', opts)
-map('n', '<F5>', ':tabnew', opts)
-map('n', '<leader>te', ':FloatermToggle', opts)
-map('n', '<leader>g', ':CocCommand git.showBlameDoc', opts)
+map('n', '<leader>tf', '<Esc>:NvimTreeFindFile<CR>', opts)
+map('n', '<F5>', '<Esc>:tabnew<CR>', opts)
+map('n', '<leader>te', '<Esc>:FloatermToggle<CR>', opts)
+map('n', '<leader>g', '<Esc>:CocCommand git.showBlameDoc<CR>', opts)
+map('v', '<C-c>', '"+y', opts)
+map('n', '<C-v>', '"*p', opts)
