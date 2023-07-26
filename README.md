@@ -96,6 +96,7 @@ You can modify the language-related shortcut keys in file `lua/options-plugins.l
 - [vim-floaterm](https://github.com/voldikss/vim-floaterm): Use (neo)vim terminal in the floating/popup window
 - [auto-pairs](https://github.com/jiangmiao/auto-pairs): Insert or delete brackets, parens, quotes in pair
 - [markdown-preview](iamcco/markdown-preview.nvim): Preview markdown on your modern browser with synchronised scrolling and flexible configuration
+- [vim-go](https://github.com/fatih/vim-go): This plugin adds Go language support for Vim/Neovim
 
 ## Structure
 
