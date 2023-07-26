@@ -39,6 +39,8 @@ return require('packer').startup(function(use)
         -- NOTE: PUT YOUR THIRD PLUGIN HERE --
         ---------------------------------------
         use { "ellisonleao/gruvbox.nvim" }
+        use 'vim-airline/vim-airline'
+        use 'vim-airline/vim-airline-themes'
         use {
             'nvim-tree/nvim-tree.lua',
             requires = {

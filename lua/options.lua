@@ -25,3 +25,9 @@ vim.opt.smartcase = true -- but make it case sensitive if an uppercase is entere
 -- disable netrw at the very start of your init.lua
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+
+vim.cmd([[
+if has("autocmd")
+    au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
+]])

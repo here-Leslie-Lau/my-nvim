@@ -86,7 +86,16 @@ You can modify the language-related shortcut keys in file `lua/options-plugins.l
 
 ## Included-Plugins
 
-TODO
+- [Packer](https://github.com/wbthomason/packer.nvim): Plugins management
+- [Gruvbox](https://github.com/ellisonleao/gruvbox.nvim): Neovim gruvbox colorscheme
+- [Vim-airline](https://github.com/vim-airline/vim-airline): vim airline
+- [vim-airline-themes](https://github.com/vim-airline/vim-airline-themes): vim airline themes
+- [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua): A File Explorer For Neovim Written In Lua
+- [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter): provide some basic functionality such as highlighting
+- [coc-nvim](https://github.com/neoclide/coc.nvim): Make your Vim/Neovim as smart as VS Code
+- [vim-floaterm](https://github.com/voldikss/vim-floaterm): Use (neo)vim terminal in the floating/popup window
+- [auto-pairs](https://github.com/jiangmiao/auto-pairs): Insert or delete brackets, parens, quotes in pair
+- [markdown-preview](iamcco/markdown-preview.nvim): Preview markdown on your modern browser with synchronised scrolling and flexible configuration
 
 ## Structure
 
