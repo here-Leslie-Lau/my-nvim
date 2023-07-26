@@ -79,14 +79,3 @@ keyset("n", "K", '<CMD>lua _G.show_docs()<CR>', {silent = true})
 keyset("i", "<c-j>", "<Plug>(coc-snippets-expand-jump)")
 -- Use <c-space> to trigger completion
 keyset("i", "<c-space>", "coc#refresh()", {silent = true, expr = true})
-
-require'nvim-tree'.setup {
-}
-
-local function open_nvim_tree()
-
-  -- open the tree
-  require("nvim-tree.api").tree.open()
-end
-
-vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
