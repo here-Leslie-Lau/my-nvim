@@ -1,14 +1,5 @@
 # My neovim config
 
-- [My neovim config](#My neovim config)
-  - [Screenshot](#Screenshot)
-  - [Reason](#Reason)
-  - [Requirements](#Requirements)
-  - [Usage](#Usage)
-  - [Keymaps](#Keymaps)
-    - [Language-related shortcut keys](#Language-related shortcut keys)
-  - [Included Plugins](#Included Plugins)
-
 ## Screenshot
 
 ![screenshot1](screenshot.png)
@@ -79,7 +70,7 @@ vim.g.mapleader = "\\"
 
 You can modify the shortcut keys in file `lua/keymaps.lua`.
 
-### Language-related shortcut keys
+### Language-related-shortcut-keys
 
 | Shortcut keys | Purpose | Remark | Mode |
 | --- | --- | --- | --- |
@@ -93,6 +84,20 @@ You can modify the shortcut keys in file `lua/keymaps.lua`.
 
 You can modify the language-related shortcut keys in file `lua/options-plugins.lua`.
 
-## Included Plugins
+## Included-Plugins
 
 TODO
+
+## Structure
+
+```shell
+.
+├── init.lua
+├── lua
+│   ├── colorscheme.lua      (Color-related configurations)
+│   ├── keymaps.lua          (keybindings configurations)
+│   ├── options.lua          (General settings)
+│   ├── options-plugins.lua  (plugins settings)
+│   └── plugins.lua          (plugins management)
+├── README.md
+```
