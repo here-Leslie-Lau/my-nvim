@@ -1,4 +1,5 @@
-# My neovim config
+# My neovim config [![](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://img.shields.io/badge/build-passing-brightgreen.svg)
+
 
 ## Screenshot
 
