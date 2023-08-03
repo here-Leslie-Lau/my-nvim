@@ -113,3 +113,9 @@ You can modify the language-related shortcut keys in file `lua/options-plugins.l
 │   └── plugins.lua          (plugins management)
 ├── README.md
 ```
+
+## Contributing
+
+Option 1: First, `fork` the code repository, then update the feature, and finally, initiate a `pull request`.
+
+Option 2: Directly open an issue.
