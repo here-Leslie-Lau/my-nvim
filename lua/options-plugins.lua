@@ -79,3 +79,10 @@ keyset("n", "K", '<CMD>lua _G.show_docs()<CR>', {silent = true})
 keyset("i", "<c-j>", "<Plug>(coc-snippets-expand-jump)")
 -- Use <c-space> to trigger completion
 keyset("i", "<c-space>", "coc#refresh()", {silent = true, expr = true})
+
+vim.cmd([[imap <silent><script><expr> <C-K> copilot#Accept("\<CR>")]])
+vim.cmd([[let g:copilot_no_tab_map = v:true]])
+vim.cmd([[ let g:copilot_filetypes = {
+                              \ '*': v:true,
+                              \ }
+]])

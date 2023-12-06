@@ -63,6 +63,7 @@ return require('packer').startup(function(use)
         })
         use 'fatih/vim-go'
         use 'mhinz/vim-startify'
+        use 'github/copilot.vim'
 
         -- Automatically set up your configuration after cloning packer.nvim
         -- Put this at the end after all plugins
