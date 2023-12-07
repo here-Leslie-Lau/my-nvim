@@ -99,6 +99,17 @@ You can modify the language-related shortcut keys in file `lua/options-plugins.l
 - [markdown-preview](iamcco/markdown-preview.nvim): Preview markdown on your modern browser with synchronised scrolling and flexible configuration
 - [vim-go](https://github.com/fatih/vim-go): This plugin adds Go language support for Vim/Neovim
 - [vim-startify](https://github.com/mhinz/vim-startify): This plugin provides a start screen for Vim and Neovim.
+- [Copilot](https://github.com/github/copilot.vim): Uses OpenAI Codex to suggest code and entire functions in real-time right from your editor
+
+## My CocList
+
+- coc-snippets
+- coc-prettier
+- coc-lua
+- coc-git
+- coc-tsserver
+- coc-json
+- coc-go
 
 ## Structure
 
