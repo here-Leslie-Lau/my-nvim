@@ -58,10 +58,10 @@ return require('packer').startup(function(use)
         use {'neoclide/coc.nvim', branch = 'release'}
         use 'voldikss/vim-floaterm'
         use 'jiangmiao/auto-pairs'
-        use({
-            "iamcco/markdown-preview.nvim",
-            run = function() vim.fn["mkdp#util#install"]() end,
-        })
+        -- use({
+        --    "iamcco/markdown-preview.nvim",
+        --    run = function() vim.fn["mkdp#util#install"]() end,
+        -- })
         use 'fatih/vim-go'
         use 'mhinz/vim-startify'
         use 'github/copilot.vim'
