@@ -22,6 +22,9 @@ require'nvim-treesitter.configs'.setup {
     enable = true
   }
 }
+
+require("ibl").setup()
+
 -- 开启 Folding
 vim.wo.foldmethod = 'expr'
 vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'

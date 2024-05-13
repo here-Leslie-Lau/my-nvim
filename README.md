@@ -96,10 +96,10 @@ You can modify the language-related shortcut keys in file `lua/options-plugins.l
 - [coc-nvim](https://github.com/neoclide/coc.nvim): Make your Vim/Neovim as smart as VS Code
 - [vim-floaterm](https://github.com/voldikss/vim-floaterm): Use (neo)vim terminal in the floating/popup window
 - [auto-pairs](https://github.com/jiangmiao/auto-pairs): Insert or delete brackets, parens, quotes in pair
-- [markdown-preview](iamcco/markdown-preview.nvim): Preview markdown on your modern browser with synchronised scrolling and flexible configuration
 - [vim-go](https://github.com/fatih/vim-go): This plugin adds Go language support for Vim/Neovim
 - [vim-startify](https://github.com/mhinz/vim-startify): This plugin provides a start screen for Vim and Neovim.
 - [Copilot](https://github.com/github/copilot.vim): Uses OpenAI Codex to suggest code and entire functions in real-time right from your editor
+- [lukas-reineke/indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim): This plugin adds indentation guides to Neovim
 
 ## My CocList
 
@@ -110,6 +110,8 @@ You can modify the language-related shortcut keys in file `lua/options-plugins.l
 - coc-tsserver
 - coc-json
 - coc-go
+- coc-vetur
+- coc-fish
 
 ## Structure
 
