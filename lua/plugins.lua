@@ -39,8 +39,7 @@ return require('packer').startup(function(use)
         -- NOTE: PUT YOUR THIRD PLUGIN HERE --
         ---------------------------------------
         use { "ellisonleao/gruvbox.nvim" }
-        -- theme ayu
-        use 'Shatur/neovim-ayu'
+        use 'iruzo/matrix-nvim'
         use 'vim-airline/vim-airline'
         use 'vim-airline/vim-airline-themes'
         use {
