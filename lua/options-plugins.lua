@@ -89,3 +89,6 @@ vim.cmd([[ let g:copilot_filetypes = {
                               \ '*': v:true,
                               \ }
 ]])
+
+-- prettier
+vim.cmd([[command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument]])
