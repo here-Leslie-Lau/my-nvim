@@ -38,10 +38,15 @@ return require('packer').startup(function(use)
         ---------------------------------------
         -- NOTE: PUT YOUR THIRD PLUGIN HERE --
         ---------------------------------------
+        -- color schemes
         use { "ellisonleao/gruvbox.nvim" }
-        use 'luisiacc/the-matrix.nvim'
-        use 'vim-airline/vim-airline'
-        use 'vim-airline/vim-airline-themes'
+
+        -- status line
+        use {
+            'nvim-lualine/lualine.nvim',
+            requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+        }
+
         use {
             'nvim-tree/nvim-tree.lua',
             requires = {
@@ -58,10 +63,7 @@ return require('packer').startup(function(use)
         use {'neoclide/coc.nvim', branch = 'release'}
         use 'voldikss/vim-floaterm'
         use 'jiangmiao/auto-pairs'
-        -- use({
-        --    "iamcco/markdown-preview.nvim",
-        --    run = function() vim.fn["mkdp#util#install"]() end,
-        -- })
+
         use 'fatih/vim-go'
         use 'mhinz/vim-startify'
         use 'github/copilot.vim'
