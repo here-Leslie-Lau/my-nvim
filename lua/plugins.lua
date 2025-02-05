@@ -41,18 +41,13 @@ return require('packer').startup(function(use)
         -- color schemes
         use { "ellisonleao/gruvbox.nvim" }
 
-        -- status line
-        use {
-            'nvim-lualine/lualine.nvim',
-            requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-        }
+        -- nvim web devicons
+        use { "nvim-tree/nvim-web-devicons" }
 
-        use {
-            'nvim-tree/nvim-tree.lua',
-            requires = {
-                'nvim-tree/nvim-web-devicons', -- optional
-            },
-        }
+        -- status line
+        use { 'nvim-lualine/lualine.nvim' }
+
+        use { 'nvim-tree/nvim-tree.lua' }
         use {
             'nvim-treesitter/nvim-treesitter',
             run = function()
