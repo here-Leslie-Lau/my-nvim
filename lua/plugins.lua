@@ -59,10 +59,14 @@ return require('packer').startup(function(use)
         use 'voldikss/vim-floaterm'
         use 'jiangmiao/auto-pairs'
 
+        -- code language
         use 'fatih/vim-go'
+
         use 'mhinz/vim-startify'
-        use 'github/copilot.vim'
         use 'lukas-reineke/indent-blankline.nvim'
+
+        -- ai tools
+        use 'github/copilot.vim'
 
         -- Automatically set up your configuration after cloning packer.nvim
         -- Put this at the end after all plugins
