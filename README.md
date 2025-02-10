@@ -89,8 +89,7 @@ You can modify the language-related shortcut keys in file `lua/options-plugins.l
 
 - [Packer](https://github.com/wbthomason/packer.nvim): Plugins management
 - [Gruvbox](https://github.com/ellisonleao/gruvbox.nvim): Neovim gruvbox colorscheme
-- [Vim-airline](https://github.com/vim-airline/vim-airline): vim airline
-- [vim-airline-themes](https://github.com/vim-airline/vim-airline-themes): vim airline themes
+- [lualine](https://github.com/nvim-lualine/lualine.nvim): A blazing fast and easy to configure neovim statusline plugin written in pure lua
 - [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua): A File Explorer For Neovim Written In Lua
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter): provide some basic functionality such as highlighting
 - [coc-nvim](https://github.com/neoclide/coc.nvim): Make your Vim/Neovim as smart as VS Code
