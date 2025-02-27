@@ -15,6 +15,4 @@ map('n', '<leader>te', '<Esc>:FloatermToggle<CR>', opts)
 map('n', '<leader>g', '<Esc>:CocCommand git.showBlameDoc<CR>', opts)
 map('v', '<C-c>', '"+y', opts)
 map('n', '<C-v>', '"*p', opts)
-
-local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
+map('n', '<leader>ff', ':Telescope find_files<CR>', opts)
