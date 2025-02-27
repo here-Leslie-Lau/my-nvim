@@ -47,7 +47,10 @@ return require('packer').startup(function(use)
         -- status line
         use { 'nvim-lualine/lualine.nvim' }
 
+        -- tree
         use { 'nvim-tree/nvim-tree.lua' }
+
+        -- tree sitter
         use {
             'nvim-treesitter/nvim-treesitter',
             run = function()
@@ -55,15 +58,25 @@ return require('packer').startup(function(use)
             ts_update()
             end,
        }
-        use {'neoclide/coc.nvim', branch = 'release'}
+
+        -- telescope
+        use {
+            'nvim-telescope/telescope.nvim', tag = '0.1.8',
+            -- or                            , branch = '0.1.x',
+            requires = { {'nvim-lua/plenary.nvim'} }
+        }
+
         use 'voldikss/vim-floaterm'
+
+        -- code style
         use 'jiangmiao/auto-pairs'
+        use 'lukas-reineke/indent-blankline.nvim'
 
         -- code language
+        use {'neoclide/coc.nvim', branch = 'release'}
         use 'fatih/vim-go'
 
         use 'mhinz/vim-startify'
-        use 'lukas-reineke/indent-blankline.nvim'
 
         -- ai tools
         use 'github/copilot.vim'
