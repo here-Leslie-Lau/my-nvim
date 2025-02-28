@@ -99,6 +99,7 @@ You can modify the language-related shortcut keys in file `lua/options-plugins.l
 - [vim-startify](https://github.com/mhinz/vim-startify): This plugin provides a start screen for Vim and Neovim.
 - [Copilot](https://github.com/github/copilot.vim): Uses OpenAI Codex to suggest code and entire functions in real-time right from your editor
 - [lukas-reineke/indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim): This plugin adds indentation guides to Neovim
+- [telescope](https://github.com/nvim-telescope/telescope.nvim): Find, Filter, Preview, Pick. All lua, all the time.
 
 ## My CocList
 
@@ -111,6 +112,7 @@ You can modify the language-related shortcut keys in file `lua/options-plugins.l
 - coc-go
 - coc-vetur
 - coc-fish
+- coc-clangd
 
 ## Structure
 
