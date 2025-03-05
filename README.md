@@ -68,6 +68,8 @@ vim.g.mapleader = "\\"
 | \<leader\>tf | Open the file tree on the left side and navigate to the location of your current file | Press **leader**,**t**,**f** | Normal |
 | \<leader\>te | Open a floating terminal inside the file | Press **leader**,**t**,**e** | Normal |
 | \<leader\>g | View the git commit history for the current line where the cursor is located | Press **leader**,**g** | Normal |
+| \<leader\>ff | Find file in current directory, seems like **find** command | Press **leader** and double **f** | Normal |
+| \<leader\>fg | Find text in current directory, seems like **grep** command | Press **leader**,**f**,**g** | Normal |
 
 You can modify the shortcut keys in file `lua/keymaps.lua`.
 
