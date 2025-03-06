@@ -98,7 +98,7 @@ You can modify the language-related shortcut keys in file `lua/options-plugins.l
 - [vim-floaterm](https://github.com/voldikss/vim-floaterm): Use (neo)vim terminal in the floating/popup window
 - [auto-pairs](https://github.com/jiangmiao/auto-pairs): Insert or delete brackets, parens, quotes in pair
 - [vim-go](https://github.com/fatih/vim-go): This plugin adds Go language support for Vim/Neovim
-- [vim-startify](https://github.com/mhinz/vim-startify): This plugin provides a start screen for Vim and Neovim.
+- [dashboard-nvim](https://github.com/nvimdev/dashboard-nvim): Fancy and Blazing Fast start screen plugin of neovim
 - [Copilot](https://github.com/github/copilot.vim): Uses OpenAI Codex to suggest code and entire functions in real-time right from your editor
 - [lukas-reineke/indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim): This plugin adds indentation guides to Neovim
 - [telescope](https://github.com/nvim-telescope/telescope.nvim): Find, Filter, Preview, Pick. All lua, all the time.

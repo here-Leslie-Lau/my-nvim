@@ -128,7 +128,13 @@ return require('packer').startup(function(use)
             ft = { 'go' },  -- when open go file, load this plugin
         }
 
-        use 'mhinz/vim-startify'
+        use {
+            'nvimdev/dashboard-nvim',
+            event = 'VimEnter',
+            config = function()
+                require('dashboard').setup{}
+            end,
+        }
 
         -- ai tools
         use {
