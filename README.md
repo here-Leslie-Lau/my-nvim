@@ -17,7 +17,7 @@ Therefore, I decided to switch to Neovim. There are several benefits:
 
 1. Easier configuration management.
 2. In case of future computer environment migration, Neovim is more convenient.
-3. Faster startup speed (not significantly different).
+3. Faster startup speed ( **30-40ms** ).
 
 ## Requirements
 
