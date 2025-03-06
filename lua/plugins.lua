@@ -62,24 +62,35 @@ return require('packer').startup(function(use)
         -- telescope
         use {
             'nvim-telescope/telescope.nvim', tag = '0.1.8',
-            -- or                            , branch = '0.1.x',
+            cmd = 'Telescope',  -- when run Telescope command, load this plugin
             requires = { {'nvim-lua/plenary.nvim'} }
         }
 
         use 'voldikss/vim-floaterm'
 
         -- code style
-        use 'jiangmiao/auto-pairs'
-        use 'lukas-reineke/indent-blankline.nvim'
+        use {
+            'jiangmiao/auto-pairs',
+            event = 'InsertEnter',  -- enter insert mode to load plugin
+        }
+        use {
+            'lukas-reineke/indent-blankline.nvim',
+        }
 
         -- code language
         use {'neoclide/coc.nvim', branch = 'release'}
-        use 'fatih/vim-go'
+        use {
+            'fatih/vim-go',
+            ft = { 'go' },  -- when open go file, load this plugin
+        }
 
         use 'mhinz/vim-startify'
 
         -- ai tools
-        use 'github/copilot.vim'
+        use {
+            'github/copilot.vim',
+            event = 'InsertEnter',  -- enter insert mode to load plugin
+        }
 
         -- Automatically set up your configuration after cloning packer.nvim
         -- Put this at the end after all plugins
