@@ -48,15 +48,48 @@ return require('packer').startup(function(use)
         use { 'nvim-lualine/lualine.nvim' }
 
         -- tree
-        use { 'nvim-tree/nvim-tree.lua' }
+        use {
+            'nvim-tree/nvim-tree.lua',
+            cmd = { 'NvimTreeToggle', 'NvimTreeOpen', 'NvimTreeFindFile' },
+            config = function()
+                require('nvim-tree').setup {}
+            end
+        }
 
         -- tree sitter
         use {
             'nvim-treesitter/nvim-treesitter',
+            event = 'BufRead',
             run = function()
             local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
             ts_update()
             end,
+            config = function()
+                require'nvim-treesitter.configs'.setup {
+                -- 安装 language parser
+                -- :TSInstallInfo 命令查看支持的语言
+                ensure_installed = {"vim", "lua", "javascript", "go", "c", "proto"},
+                -- 启用代码高亮功能
+                highlight = {
+                    enable = true,
+                    additional_vim_regex_highlighting = false
+                },
+                -- 启用增量选择
+                incremental_selection = {
+                    enable = true,
+                    keymaps = {
+                        init_selection = '<CR>',
+                        node_incremental = '<CR>',
+                        node_decremental = '<BS>',
+                        scope_incremental = '<TAB>',
+                    }
+                },
+                -- 启用基于Treesitter的代码格式化(=) . NOTE: This is an experimental feature.
+                indent = {
+                    enable = true
+                }
+            }
+            end
        }
 
         -- telescope
@@ -66,7 +99,10 @@ return require('packer').startup(function(use)
             requires = { {'nvim-lua/plenary.nvim'} }
         }
 
-        use 'voldikss/vim-floaterm'
+        use {
+            'voldikss/vim-floaterm',
+            cmd = { 'FloatermToggle', 'FloatermNew' },
+        }
 
         -- code style
         use {
@@ -75,10 +111,18 @@ return require('packer').startup(function(use)
         }
         use {
             'lukas-reineke/indent-blankline.nvim',
+            event = 'BufRead',
+            config = function ()
+                require("ibl").setup()
+            end
         }
 
         -- code language
-        use {'neoclide/coc.nvim', branch = 'release'}
+        use {
+            'neoclide/coc.nvim',
+            branch = 'release',
+            event = 'VimEnter',
+        }
         use {
             'fatih/vim-go',
             ft = { 'go' },  -- when open go file, load this plugin
