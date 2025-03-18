@@ -51,6 +51,9 @@ function _G.show_docs()
     end
 end
 keyset("n", "K", '<CMD>lua _G.show_docs()<CR>', {silent = true})
+-- also, you can use D to show docs
+keyset("n", "D", '<CMD>lua _G.show_docs()<CR>', {silent = true})
+
 -- Use <c-j> to trigger snippets
 keyset("i", "<c-j>", "<Plug>(coc-snippets-expand-jump)")
 -- Use <c-space> to trigger completion
