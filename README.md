@@ -17,6 +17,7 @@ Therefore, I decided to switch to Neovim. There are several benefits:
 
 1. Easier configuration management.
 2. In case of future computer environment migration, Neovim is more convenient.
+3. Minimalist configuration. Only 13 plugins are installed
 3. Faster startup speed ( **30-40ms** ).
 
 ## Requirements
@@ -135,3 +136,13 @@ You can modify the language-related shortcut keys in file `lua/options-plugins.l
 Option 1: First, `fork` the code repository, then update the feature, and finally, initiate a `pull request`.
 
 Option 2: Directly open an issue.
+
+## FAQ
+
+1. How to install the plugins?
+
+> `cd ~/.config/nvim && nvim lua/plugins.lua` and run `:w` Wait for the plugin installation to finish.
+
+2. If you get this error: ror while calling lua chunk: /home/xxx/.config/nvim/lua/xxx.lua:2: module 'xxx' not found.
+
+> Ignore this error. And **Refer to the first point of the FAQ**.
