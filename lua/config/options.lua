@@ -39,3 +39,25 @@ vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
 -- 默认不要折叠
 -- https://stackoverflow.com/questions/8316139/how-to-set-the-default-to-unfolded-when-you-open-a-file
 vim.wo.foldlevel = 99
+
+-- Some servers have issues with backup files, see #649
+vim.opt.backup = false
+vim.opt.writebackup = false
+
+-- Having longer updatetime (default is 4000 ms = 4s) leads to noticeable
+-- delays and poor user experience
+vim.opt.updatetime = 300
+
+-- Always show the signcolumn, otherwise it would shift the text each time
+-- diagnostics appeared/became resolved
+vim.opt.signcolumn = "yes"
+
+vim.cmd([[imap <silent><script><expr> <C-K> copilot#Accept("\<CR>")]])
+vim.cmd([[let g:copilot_no_tab_map = v:true]])
+vim.cmd([[ let g:copilot_filetypes = {
+                              \ '*': v:true,
+                              \ }
+]])
+
+-- prettier
+vim.cmd([[command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument]])
