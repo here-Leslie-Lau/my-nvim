@@ -10,3 +10,6 @@ map('n', '<leader>tf', '<Esc>:NvimTreeFindFile<CR>', opts)
 map('n', '<F5>', '<Esc>:tabnew<CR>', opts)
 map('v', '<C-c>', '"+y', opts)
 map('n', '<C-v>', '"*p', opts)
+
+-- 插件相关快捷键
+map('n', '<leader>te', '<Esc>:FloatermToggle<CR>', opts)
