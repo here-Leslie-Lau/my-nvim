@@ -97,7 +97,7 @@ You can modify the shortcut keys in file `lua/config/keymaps.lua`.
 
 ## Included-Plugins
 
-- [Packer](https://github.com/wbthomason/packer.nvim): Plugins management
+- [Lazys.nvim](https://github.com/folke/lazy.nvim): A modern plugin manager for Neovim
 - [Gruvbox](https://github.com/ellisonleao/gruvbox.nvim): Neovim gruvbox colorscheme
 - [lualine](https://github.com/nvim-lualine/lualine.nvim): A blazing fast and easy to configure neovim statusline plugin written in pure lua
 - [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua): A File Explorer For Neovim Written In Lua
