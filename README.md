@@ -61,11 +61,15 @@ Tips: I'm using coc.nvim.Currently, the installed code completion includes `coc-
 
 First, let me explain that my \<leader\> key is set to `\`
 
-You can modify the keybindings to your preferences in file `lua/keymaps.lua`:
+You can modify the keybindings to your preferences in file `lua/config/lazy.lua`:
 
 ```lua
 vim.g.mapleader = "\\"
 ```
+
+You can modify the shortcut keys in file `lua/config/keymaps.lua`.
+
+### General-shortcut-keys
 
 | Shortcut keys | Purpose | Remark | Mode |
 | --- | --- | --- | --- |
@@ -79,8 +83,6 @@ vim.g.mapleader = "\\"
 | \<leader\>ff | Find file in current directory, seems like **find** command | Press **leader** and double **f** | Normal |
 | \<leader\>fg | Find text in current directory, seems like **grep** command | Press **leader**,**f**,**g** | Normal |
 
-You can modify the shortcut keys in file `lua/keymaps.lua`.
-
 ### Language-related-shortcut-keys
 
 | Shortcut keys | Purpose | Remark | Mode |
@@ -92,8 +94,6 @@ You can modify the shortcut keys in file `lua/keymaps.lua`.
 | \<Tab\> | Scroll down the suggestions within the code completion box | Press **TAB** to scroll down | Insert |
 | \<S-Tab\> | Scroll up the suggestions within the code completion box | Press **Shift** and **TAB** to scroll up | Insert |
 | \<S-k\> | Display detailed information about the function or variable where the cursor is located | Press **Shift** and **k** show docs | Normal |
-
-You can modify the language-related shortcut keys in file `lua/options-plugins.lua`.
 
 ## Included-Plugins
 
