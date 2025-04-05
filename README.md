@@ -109,6 +109,7 @@ You can modify the shortcut keys in file `lua/config/keymaps.lua`.
 - [Copilot](https://github.com/github/copilot.vim): Uses OpenAI Codex to suggest code and entire functions in real-time right from your editor
 - [lukas-reineke/indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim): This plugin adds indentation guides to Neovim
 - [telescope](https://github.com/nvim-telescope/telescope.nvim): Find, Filter, Preview, Pick. All lua, all the time.
+- [vim-go](https://github.com/fatih/vim-go): Go development plugin for Vim. *Cause i'm a gopher. if you don't need it, you can remove this plugin.*
 
 ## My CocList
 
