@@ -9,14 +9,6 @@
 
 ![screenshot3](screenshot3.png)
 
-## Notice
-
-Recently the plug-in management of this repository was migrated from `packer nvim` to `lazy nvim`.
-
-Since tag: `2.0.0`. You can get older versions from the `1.x.x` branch. And the [origin readme](ORIGIN_README.md).
-
-Cause `packer nvim` is not maintained anymore.
-
 ## Reason
 
 I used to develop with Vim, but installing the code completion plugin (YouCompleteMe) and CSTags was too much of a hassle (those who have installed them before should deeply understand).
@@ -26,11 +18,11 @@ Therefore, I decided to switch to Neovim. There are several benefits:
 1. Easier configuration management.
 2. In case of future computer environment migration, Neovim is more convenient.
 3. Minimalist configuration. Only 13 plugins are installed
-3. Faster startup speed ( **50-60ms** ).
+3. Faster startup speed ( **30-40ms** ).
 
 ## Requirements
 
-- neovim `>= 0.10.0`
+- neovim `>= 0.8.0`
 - nodejs `>= v14`
 - lua `>= 5.2.0`
 
@@ -43,11 +35,12 @@ And then:
 ```shell
 rm -rf ~/.config/nvim/
 cd ~/.config
-git clone git@github.com:here-Leslie-Lau/my-nvim.git
+git clone –branch v1.0.9 git@github.com:here-Leslie-Lau/my-nvim.git
 mv my-nvim nvim
+cd nvim && nvim lua/plugins.lua
 ```
 
-Then, open any file with Neovim, wait for a few seconds, and the plugins will be installed automatically.
+Run in Neovim `:w` and Wait for the plugin installation to finish.
 
 Run in command-line mode:
 
@@ -61,15 +54,11 @@ Tips: I'm using coc.nvim.Currently, the installed code completion includes `coc-
 
 First, let me explain that my \<leader\> key is set to `\`
 
-You can modify the keybindings to your preferences in file `lua/config/lazy.lua`:
+You can modify the keybindings to your preferences in file `lua/keymaps.lua`:
 
 ```lua
 vim.g.mapleader = "\\"
 ```
-
-You can modify the shortcut keys in file `lua/config/keymaps.lua`.
-
-### General-shortcut-keys
 
 | Shortcut keys | Purpose | Remark | Mode |
 | --- | --- | --- | --- |
@@ -83,6 +72,8 @@ You can modify the shortcut keys in file `lua/config/keymaps.lua`.
 | \<leader\>ff | Find file in current directory, seems like **find** command | Press **leader** and double **f** | Normal |
 | \<leader\>fg | Find text in current directory, seems like **grep** command | Press **leader**,**f**,**g** | Normal |
 
+You can modify the shortcut keys in file `lua/keymaps.lua`.
+
 ### Language-related-shortcut-keys
 
 | Shortcut keys | Purpose | Remark | Mode |
@@ -95,9 +86,11 @@ You can modify the shortcut keys in file `lua/config/keymaps.lua`.
 | \<S-Tab\> | Scroll up the suggestions within the code completion box | Press **Shift** and **TAB** to scroll up | Insert |
 | \<S-k\> | Display detailed information about the function or variable where the cursor is located | Press **Shift** and **k** show docs | Normal |
 
+You can modify the language-related shortcut keys in file `lua/options-plugins.lua`.
+
 ## Included-Plugins
 
-- [Lazys.nvim](https://github.com/folke/lazy.nvim): A modern plugin manager for Neovim
+- [Packer](https://github.com/wbthomason/packer.nvim): Plugins management
 - [Gruvbox](https://github.com/ellisonleao/gruvbox.nvim): Neovim gruvbox colorscheme
 - [lualine](https://github.com/nvim-lualine/lualine.nvim): A blazing fast and easy to configure neovim statusline plugin written in pure lua
 - [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua): A File Explorer For Neovim Written In Lua
@@ -105,6 +98,7 @@ You can modify the shortcut keys in file `lua/config/keymaps.lua`.
 - [coc-nvim](https://github.com/neoclide/coc.nvim): Make your Vim/Neovim as smart as VS Code
 - [vim-floaterm](https://github.com/voldikss/vim-floaterm): Use (neo)vim terminal in the floating/popup window
 - [auto-pairs](https://github.com/jiangmiao/auto-pairs): Insert or delete brackets, parens, quotes in pair
+- [vim-go](https://github.com/fatih/vim-go): This plugin adds Go language support for Vim/Neovim
 - [dashboard-nvim](https://github.com/nvimdev/dashboard-nvim): Fancy and Blazing Fast start screen plugin of neovim
 - [Copilot](https://github.com/github/copilot.vim): Uses OpenAI Codex to suggest code and entire functions in real-time right from your editor
 - [lukas-reineke/indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim): This plugin adds indentation guides to Neovim
@@ -137,19 +131,6 @@ You can modify the shortcut keys in file `lua/config/keymaps.lua`.
 ├── README.md
 ```
 
-```shell
-.
-├──      ORIGIN_README.md         (origin readme)
-├──      README.md                (this file)
-├──      init.lua
-└──      lua/
-│  └────      config/
-│  │  ├────      keymaps.lua      (keymaps)
-│  │  ├────      lazy.lua         (lazy nvim)
-│  │  └────      options.lua      (general settings)
-│  └────      plugins/            (plugin management)
-```
-
 ## Contributing
 
 Option 1: First, `fork` the code repository, then update the feature, and finally, initiate a `pull request`.
@@ -158,17 +139,10 @@ Option 2: Directly open an issue.
 
 ## FAQ
 
-1. **How can get the origin versions?**
+1. How to install the plugins?
 
-> this repository is migrated from `packer nvim` to `lazy nvim`. You can get older versions from the `1.x.x` branch. And the [origin readme](ORIGIN_README.md).
+> `cd ~/.config/nvim && nvim lua/plugins.lua` and run `:w` Wait for the plugin installation to finish.
 
-2. **How to install the plugins?**
+2. If you get this error: ror while calling lua chunk: /home/xxx/.config/nvim/lua/xxx.lua:2: module 'xxx' not found.
 
-> Copy this repository to `~/.config/nvim/` and open any file with Neovim, wait for a few seconds, and the plugins will be installed automatically.
-
-3. **Migrate this repo from older versions to newest versions**
-
-> If you want to migrate this repository from older versions to the newest versions, please follow these steps:
-> 1. Delete the `~/.config/nvim/` directory. `rm -rf ~/.config/nvim/`
-> 2. `git clone git@github.com:here-Leslie-Lau/my-nvim.git` && `mv my-nvim nvim`
-> 3. Delete the cache of neovim. `rm -rf ~/.local/share/nvim/`
+> Ignore this error. And **Refer to the first point of the FAQ**.
