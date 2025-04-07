@@ -25,7 +25,7 @@ Therefore, I decided to switch to Neovim. There are several benefits:
 
 1. Easier configuration management.
 2. In case of future computer environment migration, Neovim is more convenient.
-3. Minimalist configuration. Only 14 plugins are installed
+3. Minimalist configuration. Only 10+ plugins are installed
 3. Faster startup speed ( **50-60ms** ).
 
 ## Requirements
@@ -111,6 +111,7 @@ You can modify the shortcut keys in file `lua/config/keymaps.lua`.
 - [telescope](https://github.com/nvim-telescope/telescope.nvim): Find, Filter, Preview, Pick. All lua, all the time.
 - [vim-go](https://github.com/fatih/vim-go): Go development plugin for Vim. *Cause i'm a gopher. if you don't need it, you can remove this plugin.*
 - [notice](https://github.com/folke/noice.nvim): Highly experimental plugin that completely replaces the UI for messages, cmdline and the popupmenu.
+- [blink-cmp](https://github.com/Saghen/blink.cmp): Performant, batteries-included completion plugin for Neovim.
 
 ## My CocList
 
