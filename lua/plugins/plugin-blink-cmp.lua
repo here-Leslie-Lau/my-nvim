@@ -3,7 +3,8 @@ return {
     -- optional: provides snippets for the snippet source
     dependencies = { 'rafamadriz/friendly-snippets' },
     Lazy = true,
-    event = 'InsertEnter',  -- enter insert mode to load plugin
+    -- event = 'InsertEnter',  -- enter insert mode to load plugin
+    ft = { 'markdown' },
 
     -- use a release tag to download pre-built binaries
     version = '1.*',
