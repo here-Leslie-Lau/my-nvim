@@ -1,4 +1,4 @@
 return {
     "williamboman/mason.nvim",
-    event = "VeryLazy",
+    event = "CmdlineEnter",
 }

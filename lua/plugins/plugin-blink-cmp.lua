@@ -1,12 +1,9 @@
 return {
     'saghen/blink.cmp',
-    -- temporary disable until the plugin is stable
-    enable = false,
     -- optional: provides snippets for the snippet source
     dependencies = { 'rafamadriz/friendly-snippets' },
     Lazy = true,
-    -- event = 'InsertEnter',  -- enter insert mode to load plugin
-    ft = { 'markdown' },
+    event = "VimEnter",
 
     -- use a release tag to download pre-built binaries
     version = '1.*',
