@@ -107,10 +107,11 @@ You can modify the shortcut keys in file `lua/config/keymaps.lua`.
 - [nvim-autopairs](https://github.com/windwp/nvim-autopairs): autopairs for neovim written in lua.
 - [dashboard-nvim](https://github.com/nvimdev/dashboard-nvim): Fancy and Blazing Fast start screen plugin of neovim
 - [Copilot](https://github.com/github/copilot.vim): Uses OpenAI Codex to suggest code and entire functions in real-time right from your editor
-- [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim): This plugin adds indentation guides to Neovim
+- [indent-blankline](https://github.com/lukas-reineke/indent-blankline.nvim): This plugin adds indentation guides to Neovim
 - [telescope](https://github.com/nvim-telescope/telescope.nvim): Find, Filter, Preview, Pick. All lua, all the time.
 - [vim-go](https://github.com/fatih/vim-go): Go development plugin for Vim. *Cause i'm a gopher. if you don't need it, you can remove this plugin.*
 - [notice](https://github.com/folke/noice.nvim): Highly experimental plugin that completely replaces the UI for messages, cmdline and the popupmenu.
+- [gitsigns](https://github.com/lewis6991/gitsigns.nvim/tree/main): Git integration for buffers.
 
 ## My CocList
 

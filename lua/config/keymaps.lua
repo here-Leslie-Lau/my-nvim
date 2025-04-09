@@ -15,7 +15,8 @@ map('n', '<C-v>', '"*p', opts)
 map('n', '<leader>te', '<Esc>:FloatermToggle<CR>', opts)
 map('n', '<leader>ff', ':Telescope find_files<CR>', opts)
 map('n', '<leader>fg', ':Telescope live_grep<CR>', opts)
-map('n', '<leader>g', '<Esc>:CocCommand git.showBlameDoc<CR>', opts)
+map('n', '<leader>g', '<Esc>:Gitsigns blame_line<CR>', opts)
+map('n', '<leader>G', '<Esc>:Gitsigns blame<CR>', opts)
 
 local keyset = vim.keymap.set
 -- Autocomplete
