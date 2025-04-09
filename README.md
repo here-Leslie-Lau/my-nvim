@@ -5,9 +5,9 @@
 
 ![screenshot1](screenshot.png)
 
-![screenshot2](screenshot2.png)
+![screenshot4](screenshot4.png)
 
-![screenshot3](screenshot3.png)
+![screenshot5](screenshot5.png)
 
 ## Notice
 
@@ -25,8 +25,8 @@ Therefore, I decided to switch to Neovim. There are several benefits:
 
 1. Easier configuration management.
 2. In case of future computer environment migration, Neovim is more convenient.
-3. Minimalist configuration. Only 10+ plugins are installed
-3. Faster startup speed ( **50-60ms** ).
+3. Minimalist configuration. Only 20+ plugins are installed
+3. Faster startup speed ( **40-50ms** ).
 
 ## Requirements
 
@@ -49,13 +49,13 @@ mv my-nvim nvim
 
 Then, open any file with Neovim, wait for a few seconds, and the plugins will be installed automatically.
 
-Run in command-line mode:
+Run in command-line mode (Optional):
 
 ```shell
-:CocInstall coc-git coc-json coc-lua <your code language...>
+:MasonInstall <your code language server protocol...>
 ```
 
-Tips: I'm using coc.nvim.Currently, the installed code completion includes `coc-go, coc-json, coc-lua`.If the programming language you need is not available, you can refer to the [official website](https://github.com/neoclide/coc.nvim).
+Tips(2025-04-09): I'm using `mason.nvim`. Currently, the installed lsp includes `gopls, clangd, lua-language-server`. If the programming language you need is not available, you can refer to the [official website](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md).
 
 ## Keymaps
 
@@ -67,7 +67,7 @@ You can modify the keybindings to your preferences in file `lua/config/lazy.lua`
 vim.g.mapleader = "\\"
 ```
 
-You can modify the shortcut keys in file `lua/config/keymaps.lua`.
+You can modify the shortcut keys in file `lua/config/keymaps.lua` or `lua/config/lsp.lua`.
 
 ### General-shortcut-keys
 
@@ -80,6 +80,7 @@ You can modify the shortcut keys in file `lua/config/keymaps.lua`.
 | \<leader\>tf | Open the file tree on the left side and navigate to the location of your current file | Press **leader**,**t**,**f** | Normal |
 | \<leader\>te | Open a floating terminal inside the file | Press **leader**,**t**,**e** | Normal |
 | \<leader\>g | View the git commit history for the current line where the cursor is located | Press **leader**,**g** | Normal |
+| \<leader\>G | View the git commit history for the current file where the cursor is located | Press **leader**,**shift**,**g** | Normal |
 | \<leader\>ff | Find file in current directory, seems like **find** command | Press **leader** and double **f** | Normal |
 | \<leader\>fg | Find text in current directory, seems like **grep** command | Press **leader**,**f**,**g** | Normal |
 
@@ -89,11 +90,13 @@ You can modify the shortcut keys in file `lua/config/keymaps.lua`.
 | --- | --- | --- | --- |
 | \<c-]\> | Go to the definition | Press **ctrl** and **]** | Normal |
 | \<c-t\> | Go to the type definition | Press **ctrl** and **t** | Normal |
-| gi | Go to the type definition | Press **g** and **i** | Normal |
+| gi | Go to the implementation of current interface | Press **g** and **i** | Normal |
 | gr | View variable or function references | Press **g** and **r** | Normal |
 | \<Tab\> | Scroll down the suggestions within the code completion box | Press **TAB** to scroll down | Insert |
 | \<S-Tab\> | Scroll up the suggestions within the code completion box | Press **Shift** and **TAB** to scroll up | Insert |
 | \<S-k\> | Display detailed information about the function or variable where the cursor is located | Press **Shift** and **k** show docs | Normal |
+| ]d | Jump to the next diagnostic | Press **]** and **d** | Normal |
+| [d | Jump to the previous diagnostic | Press **[** and **d** | Normal |
 
 ## Included-Plugins
 
@@ -102,7 +105,9 @@ You can modify the shortcut keys in file `lua/config/keymaps.lua`.
 - [lualine](https://github.com/nvim-lualine/lualine.nvim): A blazing fast and easy to configure neovim statusline plugin written in pure lua
 - [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua): A File Explorer For Neovim Written In Lua
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter): provide some basic functionality such as highlighting
-- [coc-nvim](https://github.com/neoclide/coc.nvim): Make your Vim/Neovim as smart as VS Code
+- [mason](https://github.com/williamboman/mason.nvim): Portable package manager for Neovim that runs everywhere Neovim runs. Easily install and manage LSP servers, DAP servers, linters, and formatters.
+- [mason-lspconfig](https://github.com/williamboman/mason-lspconfig.nvim): Extension to mason.nvim that makes it easier to use lspconfig with mason.nvim.
+- [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig): Quickstart configs for Nvim LSP.
 - [vim-floaterm](https://github.com/voldikss/vim-floaterm): Use (neo)vim terminal in the floating/popup window
 - [nvim-autopairs](https://github.com/windwp/nvim-autopairs): autopairs for neovim written in lua.
 - [dashboard-nvim](https://github.com/nvimdev/dashboard-nvim): Fancy and Blazing Fast start screen plugin of neovim
@@ -112,19 +117,13 @@ You can modify the shortcut keys in file `lua/config/keymaps.lua`.
 - [vim-go](https://github.com/fatih/vim-go): Go development plugin for Vim. *Cause i'm a gopher. if you don't need it, you can remove this plugin.*
 - [notice](https://github.com/folke/noice.nvim): Highly experimental plugin that completely replaces the UI for messages, cmdline and the popupmenu.
 - [gitsigns](https://github.com/lewis6991/gitsigns.nvim/tree/main): Git integration for buffers.
+- [blink-cmp](https://github.com/Saghen/blink.cmp): Performant, batteries-included completion plugin for Neovim.
 
-## My CocList
+## My LSP 
 
-- coc-snippets
-- coc-prettier
-- coc-lua
-- coc-git
-- coc-tsserver
-- coc-json
-- coc-go
-- coc-vetur
-- coc-fish
-- coc-clangd
+- clangd
+- gopls
+- lua-language-server
 
 ## Structure
 
@@ -137,6 +136,7 @@ You can modify the shortcut keys in file `lua/config/keymaps.lua`.
 │  └────    config/
 │  │  ├────    keymaps.lua      (keymaps)
 │  │  ├────    lazy.lua         (lazy nvim)
+│  │  ├────    lsp.lua          (lsq config)
 │  │  └────    options.lua      (general settings)
 │  └────    plugins/            (plugin management)
 ```

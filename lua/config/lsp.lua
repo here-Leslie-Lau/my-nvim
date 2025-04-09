@@ -1,7 +1,7 @@
 require("mason").setup()
 require("mason-lspconfig").setup()
 
-for _, val in ipairs({ "pyright", "gopls" }) do
+for _, val in ipairs({ "pyright", "gopls", "clangd", "grammarly-languageserver" }) do
     require("lspconfig")[val].setup({
         on_attach = function(client, bufnr)
             if client.server_capabilities.inlayHintProvider then
