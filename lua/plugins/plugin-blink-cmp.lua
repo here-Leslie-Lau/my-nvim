@@ -1,5 +1,7 @@
 return {
     'saghen/blink.cmp',
+    -- temporary disable until the plugin is stable
+    enable = false,
     -- optional: provides snippets for the snippet source
     dependencies = { 'rafamadriz/friendly-snippets' },
     Lazy = true,
