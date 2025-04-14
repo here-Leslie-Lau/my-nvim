@@ -31,7 +31,6 @@ Therefore, I decided to switch to Neovim. There are several benefits:
 ## Requirements
 
 - neovim `>= 0.10.0`
-- nodejs `>= v14`
 - lua `>= 5.2.0`
 
 ## Usage
