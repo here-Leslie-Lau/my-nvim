@@ -123,6 +123,7 @@ You can modify the shortcut keys in file `lua/config/keymaps.lua` or `lua/config
 - clangd
 - gopls
 - lua-language-server
+- buf_ls
 
 ## Structure
 
