@@ -2,7 +2,7 @@ return {
     -- "github/copilot.vim",
     "zbirenbaum/copilot.lua",
     event = 'InsertEnter',  -- enter insert mode to load plugin
-    cmd = "Copilot",
+    -- cmd = "Copilot",
     config = function()
         require('copilot').setup({
             panel = {
@@ -36,11 +36,11 @@ return {
                 },
             },
             filetypes = {
-                yaml = false,
-                markdown = false,
+                yaml = true,
+                markdown = true,
                 help = false,
-                gitcommit = false,
-                gitrebase = false,
+                gitcommit = true,
+                gitrebase = true,
                 hgcommit = false,
                 svn = false,
                 cvs = false,
@@ -63,12 +63,10 @@ return {
             end,
             should_attach = function(_, _)
                 if not vim.bo.buflisted then
-                    logger.debug("not attaching, buffer is not 'buflisted'")
                     return false
                 end
 
                 if vim.bo.buftype ~= "" then
-                    logger.debug("not attaching, buffer 'buftype' is " .. vim.bo.buftype)
                     return false
                 end
 

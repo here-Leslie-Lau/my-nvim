@@ -32,6 +32,7 @@ Therefore, I decided to switch to Neovim. There are several benefits:
 
 - neovim `>= 0.10.0`
 - lua `>= 5.2.0`
+- nodejs `>= 20.0.0`
 
 ## Usage
 
@@ -48,13 +49,26 @@ mv my-nvim nvim
 
 Then, open any file with Neovim, wait for a few seconds, and the plugins will be installed automatically.
 
-Run in command-line mode (Optional):
+Install the language server protocol (LSP) for your programming language (Optional).
+
+Option 1: Run the script in shell.
+
+```shell
+sh ~/.config/nvim/shells/lsp_install.sh
+```
+
+Option 2: Run the following command in Neovim.
 
 ```shell
 :MasonInstall <your code language server protocol...>
 ```
 
-Tips(2025-04-09): I'm using `mason.nvim`. Currently, the installed lsp includes `gopls, clangd, lua-language-server`. If the programming language you need is not available, you can refer to the [official website](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md).
+Tips(2025-04-09): I'm using `mason.nvim`. Currently, the installed lsp includes `gopls, clangd, lua-language-server, buf_ls, taplo`. If the programming language you need is not available, you can refer to the [official website](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md). And then change the lsp in `lua/config/lsp.lua` to your needs.
+
+```lua
+for _, val in ipairs({ <your code language server protocol> }) do
+--- some lua code
+```
 
 ## Keymaps
 
@@ -110,7 +124,7 @@ You can modify the shortcut keys in file `lua/config/keymaps.lua` or `lua/config
 - [vim-floaterm](https://github.com/voldikss/vim-floaterm): Use (neo)vim terminal in the floating/popup window
 - [nvim-autopairs](https://github.com/windwp/nvim-autopairs): autopairs for neovim written in lua.
 - [dashboard-nvim](https://github.com/nvimdev/dashboard-nvim): Fancy and Blazing Fast start screen plugin of neovim
-- [Copilot](https://github.com/github/copilot.vim): Uses OpenAI Codex to suggest code and entire functions in real-time right from your editor
+- [Copilot](https://github.com/zbirenbaum/copilot.lua): Fully featured & enhanced replacement for copilot.vim complete with API for interacting with Github Copilot
 - [indent-blankline](https://github.com/lukas-reineke/indent-blankline.nvim): This plugin adds indentation guides to Neovim
 - [telescope](https://github.com/nvim-telescope/telescope.nvim): Find, Filter, Preview, Pick. All lua, all the time.
 - [vim-go](https://github.com/fatih/vim-go): Go development plugin for Vim. *Cause i'm a gopher. if you don't need it, you can remove this plugin.*
@@ -163,3 +177,8 @@ Option 2: Directly open an issue.
 > 1. Delete the `~/.config/nvim/` directory. `rm -rf ~/.config/nvim/`
 > 2. `git clone git@github.com:here-Leslie-Lau/my-nvim.git` && `mv my-nvim nvim`
 > 3. Delete the cache of neovim. `rm -rf ~/.local/share/nvim/`
+
+4. **Lsp error**
+
+> If `Neovim` shows `the lsp server is not installed` or some related lsp's error, please run the following command:
+> `sh ~/.config/nvim/shells/lsp_install.sh`
