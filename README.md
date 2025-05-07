@@ -117,6 +117,7 @@ You can modify the shortcut keys in file `lua/config/keymaps.lua`.
 - [notice](https://github.com/folke/noice.nvim): Highly experimental plugin that completely replaces the UI for messages, cmdline and the popupmenu.
 - [gitsigns](https://github.com/lewis6991/gitsigns.nvim/tree/main): Git integration for buffers.
 - [blink-cmp](https://github.com/Saghen/blink.cmp): Performant, batteries-included completion plugin for Neovim.
+- [go-nvim](https://github.com/ray-x/go.nvim): Discover the Feature-Rich Go Plugin for Neovim. **cause i'm a gopher. if u don't need it, you can del it**
 
 ## My LSP 
 
