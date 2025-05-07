@@ -18,6 +18,18 @@ map('n', '<leader>fg', ':Telescope live_grep<CR>', opts)
 map('n', '<leader>g', '<Esc>:Gitsigns blame_line<CR>', opts)
 map('n', '<leader>G', '<Esc>:Gitsigns blame<CR>', opts)
 
+-- 语言相关
+vim.keymap.set("n", "K", "<CMD>Lspsaga hover_doc<CR>", opts)
+vim.keymap.set("n", "D", "<CMD>Lspsaga hover_doc<CR>", opts)
+vim.keymap.set("n", "<C-]>", "<CMD>Lspsaga goto_definition<CR>", opts)
+vim.keymap.set("n", "gi", "<CMD>lua vim.lsp.buf.implementation()<CR>", opts)
+-- vim.keymap.set("n", "ga", "<CMD>lua vim.lsp.buf.code_action()<CR>", opts)
+vim.keymap.set("n", "]d", "<CMD>Lspsaga diagnostic_jump_next<CR>", opts)
+vim.keymap.set("n", "[d", "<CMD>Lspsaga diagnostic_jump_prev<CR>", opts)
+vim.keymap.set("n", "gr", "<CMD>Lspsaga finder<CR>", opts)
+-- open outline
+vim.keymap.set("n", "<leader>oo", "<CMD>Lspsaga outline<CR>", opts)
+
 local keyset = vim.keymap.set
 -- Autocomplete
 function _G.check_back_space()
