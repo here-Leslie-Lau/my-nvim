@@ -9,6 +9,21 @@
 
 ![screenshot5](screenshot5.png)
 
+## Table of Contents
+
+- [Notice](##notice)
+- [Reason](##reason)
+- [Requirements](##requirements)
+- [Usage](##usage)
+- [Keymaps](##keymaps)
+  - [General-shortcut-keys](###general-shortcut-keys)
+  - [Language-related-shortcut-keys](###language-related-shortcut-keys)
+- [Included-Plugins](##included-plugins)
+- [My LSP](##my-lsp)
+- [Structure](##structure)
+- [Contributing](##contributing)
+- [FAQ](##faq)
+
 ## Notice
 
 Recently the plug-in management of this repository was migrated from `packer nvim` to `lazy nvim`.
