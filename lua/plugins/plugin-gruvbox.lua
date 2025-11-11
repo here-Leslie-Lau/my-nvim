@@ -31,8 +31,6 @@ return {
                 transparent_mode = false,
             })
             vim.o.background = "dark" -- or "light" for light mode
-            vim.base16colorspace = 256
-            vim.cmd('colorscheme gruvbox')
         end,
     }
 }

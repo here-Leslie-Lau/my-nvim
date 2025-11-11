@@ -117,6 +117,7 @@ You can modify the shortcut keys in file `lua/config/keymaps.lua`.
 
 - [Lazys.nvim](https://github.com/folke/lazy.nvim): A modern plugin manager for Neovim
 - [Gruvbox](https://github.com/ellisonleao/gruvbox.nvim): Neovim gruvbox colorscheme
+- [Everforest](https://github.com/neanias/everforest-nvim): A Lua port of the Everforest colour scheme
 - [lualine](https://github.com/nvim-lualine/lualine.nvim): A blazing fast and easy to configure neovim statusline plugin written in pure lua
 - [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua): A File Explorer For Neovim Written In Lua
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter): provide some basic functionality such as highlighting
@@ -150,6 +151,7 @@ You can modify the shortcut keys in file `lua/config/keymaps.lua`.
 ├──    init.lua
 └──    lua/
 │  └────    config/
+│  │  ├────    colorscheme.lua  (colorscheme settings)
 │  │  ├────    keymaps.lua      (keymaps)
 │  │  ├────    lazy.lua         (lazy nvim)
 │  │  └────    options.lua      (general settings)
