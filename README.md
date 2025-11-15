@@ -126,7 +126,6 @@ You can modify the shortcut keys in file `lua/config/keymaps.lua`.
 - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig): Quickstart configs for Nvim LSP.
 - [lspsaga](https://github.com/nvimdev/lspsaga.nvim): improve neovim lsp experience.
 - [nvim-autopairs](https://github.com/windwp/nvim-autopairs): autopairs for neovim written in lua.
-- [dashboard-nvim](https://github.com/nvimdev/dashboard-nvim): Fancy and Blazing Fast start screen plugin of neovim
 - [Copilot](https://github.com/zbirenbaum/copilot.lua): Fully featured & enhanced replacement for copilot.vim complete with API for interacting with Github Copilot
 - [indent-blankline](https://github.com/lukas-reineke/indent-blankline.nvim): This plugin adds indentation guides to Neovim
 - [telescope](https://github.com/nvim-telescope/telescope.nvim): Find, Filter, Preview, Pick. All lua, all the time.
