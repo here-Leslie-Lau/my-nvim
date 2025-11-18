@@ -3,6 +3,7 @@ return {
         "neanias/everforest-nvim",
         version = false,
         priority = 1000,
+        lazy = true,
         background = "hard",
         transparent_background_level = 0,
         italics = false,

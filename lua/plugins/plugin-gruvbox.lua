@@ -2,7 +2,7 @@
 return {
     {
         "ellisonleao/gruvbox.nvim",
-        lazy = false,
+        lazy = true,
         priority = 1000,
         -- load the colorscheme here
         config = function()

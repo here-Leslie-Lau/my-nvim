@@ -116,8 +116,6 @@ You can modify the shortcut keys in file `lua/config/keymaps.lua`.
 ## Included-Plugins
 
 - [Lazys.nvim](https://github.com/folke/lazy.nvim): A modern plugin manager for Neovim
-- [Gruvbox](https://github.com/ellisonleao/gruvbox.nvim): Neovim gruvbox colorscheme
-- [Everforest](https://github.com/neanias/everforest-nvim): A Lua port of the Everforest colour scheme
 - [lualine](https://github.com/nvim-lualine/lualine.nvim): A blazing fast and easy to configure neovim statusline plugin written in pure lua
 - [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua): A File Explorer For Neovim Written In Lua
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter): provide some basic functionality such as highlighting
@@ -133,6 +131,11 @@ You can modify the shortcut keys in file `lua/config/keymaps.lua`.
 - [gitsigns](https://github.com/lewis6991/gitsigns.nvim/tree/main): Git integration for buffers.
 - [blink-cmp](https://github.com/Saghen/blink.cmp): Performant, batteries-included completion plugin for Neovim.
 - [go-nvim](https://github.com/ray-x/go.nvim): Discover the Feature-Rich Go Plugin for Neovim. **cause i'm a gopher. if u don't need it, you can del it**
+
+**Colorschemes, When you open any file with `nvim`, it will randomly choose one of the following colorschemes:**
+- [Gruvbox](https://github.com/ellisonleao/gruvbox.nvim): Neovim gruvbox colorscheme
+- [Everforest](https://github.com/neanias/everforest-nvim): A Lua port of the Everforest colour scheme
+- [Ayu](https://github.com/Shatur/neovim-ayu): Ayu theme for Neovim
 
 ## My LSP 
 
