@@ -98,6 +98,7 @@ You can modify the shortcut keys in file `lua/config/keymaps.lua`.
 | \<leader\>G | View the git commit history for the current file where the cursor is located | Press **leader**,**shift**,**g** | Normal |
 | \<leader\>ff | Find file in current directory, seems like **find** command | Press **leader** and double **f** | Normal |
 | \<leader\>fg | Find text in current directory, seems like **grep** command | Press **leader**,**f**,**g** | Normal |
+| za | Fold or Unfold | Press **z** and **a** to fold or unfold the code block where the cursor is located | Normal |
 
 ### Language-related-shortcut-keys
 
@@ -135,7 +136,7 @@ You can modify the shortcut keys in file `lua/config/keymaps.lua`.
 **Colorschemes, When you open any file with `nvim`, it will randomly choose one of the following colorschemes:**
 - [Gruvbox](https://github.com/ellisonleao/gruvbox.nvim): Neovim gruvbox colorscheme
 - [Everforest](https://github.com/neanias/everforest-nvim): A Lua port of the Everforest colour scheme
-- [Ayu](https://github.com/Shatur/neovim-ayu): Ayu theme for Neovim
+- [rose-pine](https://github.com/rose-pine/neovim): Soho vibes for Neovim
 
 ## My LSP 
 

@@ -1,6 +1,6 @@
 vim.base16colorspace = 256
 
-local themes = { "gruvbox", "everforest", "ayu"}
+local themes = { "gruvbox", "everforest", "rose-pine" }
 -- make sure the random seed is different each time
 math.randomseed(os.time())
 local random_index = math.random(#themes)
