@@ -70,7 +70,7 @@ Install the language server protocol (LSP) for your programming language (Option
 :MasonInstall <your code language server protocol...>
 ```
 
-Tips(2025-04-09): I'm using `mason.nvim`. Currently, the installed lsp includes `gopls, clangd, lua-language-server, buf_ls, taplo`. If the programming language you need is not available, you can refer to the [official website](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md).
+Tips(2025-04-09): I'm using `mason.nvim`. Currently, the installed lsp includes `gopls, lua-language-server, buf_ls, zls`. If the programming language you need is not available, you can refer to the [official website](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md).
 
 ## Keymaps
 
@@ -140,10 +140,10 @@ You can modify the shortcut keys in file `lua/config/keymaps.lua`.
 
 ## My LSP 
 
-- clangd
 - gopls
 - lua-language-server
 - buf_ls
+- zls
 
 ## Structure
 
