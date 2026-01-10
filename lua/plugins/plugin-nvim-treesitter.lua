@@ -1,20 +1,18 @@
 return {
     "nvim-treesitter/nvim-treesitter",
-    -- lazy = true,
-    -- event = 'BufRead',
-    tag = 'v0.10.0',
     build = ":TSUpdate",
     config = function()
-        require'nvim-treesitter.configs'.setup{
-            -- 安装 language parser
-            -- :TSInstallInfo 命令查看支持的语言
-            ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "go", "gomod", "fish", "javascript" },
-            sync_install = false,
-            highlight = { enable = true },
-            indent = { enable = true },
-        }
+        -- 手动安装需要的 parser
+        -- 因为新版 nvim-treesitter 移除了 configs 模块，我们需要手动调用 install 模块
+        local ensure_installed = { "zig", "lua", "query", "go", "gomod", "fish" }
+        require('nvim-treesitter.install').update(ensure_installed)
 
-        -- run TSBufToggle highlight
-        vim.cmd('TSBufToggle highlight')
+        -- 启用高亮
+        vim.api.nvim_create_autocmd('FileType', {
+            pattern = ensure_installed,
+            callback = function()
+                pcall(vim.treesitter.start)
+            end,
+        })
     end,
 }
