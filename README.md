@@ -136,7 +136,7 @@ You can modify the shortcut keys in file `lua/config/keymaps.lua`.
 **Colorschemes, When you open any file with `nvim`, it will randomly choose one of the following colorschemes:**
 - [Gruvbox](https://github.com/ellisonleao/gruvbox.nvim): Neovim gruvbox colorscheme
 - [Everforest](https://github.com/neanias/everforest-nvim): A Lua port of the Everforest colour scheme
-- [rose-pine](https://github.com/rose-pine/neovim): Soho vibes for Neovim
+- [OneDark](https://github.com/navarasu/onedark.nvim): One dark and light colorscheme for neovim >= 0.5.0 written in lua based on Atom's One Dark and Light theme.
 
 ## My LSP 
 
