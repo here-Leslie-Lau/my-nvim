@@ -2,7 +2,7 @@ return {
     -- "github/copilot.vim",
     "zbirenbaum/copilot.lua",
     event = 'InsertEnter',  -- enter insert mode to load plugin
-    -- cmd = "Copilot",
+    cmd = "Copilot",
     config = function()
         require('copilot').setup({
             panel = {
@@ -78,5 +78,7 @@ return {
             },
             server_opts_overrides = {},
         })
+        -- setup() enables by default; keep off until :Copilot enable
+        require("copilot.command").disable()
     end,
 }
